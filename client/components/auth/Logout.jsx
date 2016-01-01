@@ -1,14 +1,15 @@
 'use strict';
 import React, { Component } from 'react';
 
-class About extends Component {
+class Logout extends Component {
+
   render() {
     return(
-      <div className='Image'>
-        About page here
+      <div>
+        Logout made
       </div>
     );
   }
 }
 
-export default About;
+export default Logout;
