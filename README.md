@@ -1,1 +1,1 @@
-# react-router-starter
+# Demo app
