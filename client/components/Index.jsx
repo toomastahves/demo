@@ -1,5 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
+
 import Header from './header/index';
 import Footer from './footer/index';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
@@ -17,7 +18,6 @@ class Index extends Component {
           {React.cloneElement(this.props.children, {
             key: this.props.location.pathname
           })}
-
         </ReactCSSTransitionGroup>
         <Footer />
       </div>

@@ -10,6 +10,7 @@ class Header extends Component {
       <div>
         <Link to='home' activeStyle={ACTIVE}>Home</Link>
         <Link to='about' activeStyle={ACTIVE}>About</Link>
+        <Link to='pets' activeStyle={ACTIVE}>Pets</Link>
       </div>
     );
   }
