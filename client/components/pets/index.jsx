@@ -1,6 +1,7 @@
 'use strict';
 import React, { Component } from 'react';
 import PetsList from './PetsList';
+import { Link } from 'react-router';
 
 class Pets extends Component {
   constructor() {
@@ -18,7 +19,7 @@ class Pets extends Component {
     const pets = this.state.pets;
     return(
       <div>
-        Add new link<br/>
+        <Link to='petform'>Add new</Link><br/>
         <PetsList pets={pets} />
       </div>
     );

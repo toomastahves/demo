@@ -11,6 +11,7 @@ import Index from '../components/Index';
 import Home from '../components/home/index';
 import About from '../components/about/index';
 import Pets from '../components/pets/index';
+import PetForm from '../components/pets/PetForm';
 import NotFound from '../components/common/NotFound';
 
 import Login from '../components/auth/Login';
@@ -27,6 +28,7 @@ class RouterConfig extends Component {
           <Route path='home' component={Home} />
           <Route path='about' component={About} />
           <Route path='pets' component={Pets} />
+          <Route path='petform' component={PetForm} />
           <Route path='*' status={404} component={NotFound} />
         </Route>
       </Router>

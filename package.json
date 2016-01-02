@@ -1,7 +1,7 @@
 {
-  "name": "react-router-starter",
+  "name": "demo",
   "version": "0.0.1",
-  "description": "React router starter",
+  "description": "Demo app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,12 +19,15 @@
   },
   "homepage": "https://github.com/toomastahves/demo#readme",
   "dependencies": {
+    "express": "^4.13.3",
     "flux": "^2.1.1",
     "history": "^1.17.0",
+    "material-ui": "^0.14.0",
     "react": "^0.14.5",
     "react-addons-css-transition-group": "^0.14.5",
     "react-dom": "^0.14.5",
-    "react-router": "^1.0.3"
+    "react-router": "^1.0.3",
+    "react-tap-event-plugin": "^0.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
@@ -37,6 +40,8 @@
     "eslint-plugin-react": "^3.13.1",
     "html-webpack-plugin": "^1.7.0",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.9"
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-dev-server": "^1.14.0"
   }
 }
