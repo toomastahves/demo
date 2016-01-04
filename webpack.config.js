@@ -1,15 +1,12 @@
 'use strict';
 const HtmlwebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 
 module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
   entry: {
-    client: [
-      './client/main.jsx'
-    ]
+    client: './client/main.jsx'
   },
   output: {
     path: './dist',
@@ -21,11 +18,6 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel'
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        loader: 'style-loader!css-loader'
       }
     ]
   },
