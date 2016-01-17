@@ -1,1 +1,6 @@
-Basic navigation with react-router and Material UI.
+Run:
+```
+npm install
+npm start
+http://localhost:1337/
+```

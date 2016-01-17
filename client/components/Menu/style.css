@@ -1,0 +1,36 @@
+.menu {
+  flex: 1;
+  background-color: rgb(161, 161, 199);
+  margin: 4px;
+  box-shadow: 2px 2px 2px rgb(108, 90, 158);
+}
+
+.menuitem {
+  display: flex;
+  padding: 1em;
+  font-size: 1.2em;
+  text-decoration: none;
+  background-color: rgb(161, 161, 199);
+  color: white;
+  transition: color 0.1s, background 0.1s;
+}
+
+.menuitem:hover {
+  color: rgb(21, 82, 36);
+  background-color: rgb(206, 200, 208);
+}
+
+@media all and (max-width: 640px) {
+  .menu {
+    width: 240px;
+  	height: 100%;
+  	top: 0;
+    transition: all 0.3s ease;
+  	position: fixed;
+  	left: -250px;
+  }
+  .pushedMenu {
+    composes: menu;
+    left: 0;
+  }
+}

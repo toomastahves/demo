@@ -1,20 +1,10 @@
-import React, { Component, PropTypes } from 'react';
-import {Spacing, Colors} from 'material-ui/lib/styles';
-
-const style = {
-  margin: Spacing.desktopGutter,
-  backgroundColor: Colors.teal100
-}
+import React, { Component } from 'react';
 
 class About extends Component {
   render() {
-    return(
-      <div style={style}>
-        <h1>About page</h1>
-        <h3>About content</h3>
-      </div>
+    return (
+      <div>{'About page'}</div>
     );
   }
 }
-
 export default About;
