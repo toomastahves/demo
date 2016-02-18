@@ -7,7 +7,7 @@ const alchemy_vision = watson.alchemy_vision({
 });
 
 const params = {
-  image: fs.createReadStream('public/images/bunny.jpg')
+  image: fs.createReadStream('public/files/car.jpg')
 };
 
 const vision = () => {

@@ -5,5 +5,5 @@ app.listen(port, () => {
   console.log(`Started at ${port}`);
 });
 
-// import watson from './watson/concept_expansion';
-// watson();
+// import w from './watson/visual_recognition';
+// w();

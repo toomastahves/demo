@@ -1,3 +1,5 @@
 node_modules
 node-red
 config/index.js
+public/documents
+public/images
