@@ -1,6 +1,8 @@
-Run:
 ```
 npm install
 npm start
-http://localhost:1337/
+
+config/index.js needs own API keys and username/passwords.
+server/watson code samples
+
 ```
