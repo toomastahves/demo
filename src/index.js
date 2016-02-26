@@ -1,2 +1,0 @@
-require('./Connection');
-require('./Button');

@@ -1,0 +1,6 @@
+export default {
+  REDISCLOUD_URL: '',
+  MONGOLAB_URI: '',
+  USERNAME_SPEECH_TO_TEXT: '2730888a-8fbb-430d-b45e-eb776ddd7f28',
+  PASSWORD_SPEECH_TO_TEXT: 'H6CdHFoqGPq9'
+};

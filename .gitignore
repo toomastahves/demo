@@ -1,2 +1,5 @@
 node_modules
-public/index.js
+npm-debug.log
+public/assets
+coverage
+node_red
