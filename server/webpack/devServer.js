@@ -8,10 +8,10 @@ export const startWebpackDevServer = () => {
     noInfo: true,
     publicPath: config.output.publicPath,
     proxy: {
-      '*': 'http://localhost:3000'
+      '*': 'http://127.0.0.1:3000'
     }
   })
-  .listen(1337, 'localhost', () => {
+  .listen(1337, '127.0.0.1', () => {
     console.log('WebpackDevServer started at localhost:1337');
   });
 };
