@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'babel-polyfill';
 import { Provider } from 'react-redux';
-import Routes from './routes/';
+import App from './components/App';
 import store from './store/';
-import './style.css';
-import { getToken } from './actions/token';
-
-store.dispatch(getToken());
+import '../public/styles/index.css';
 
 const application = (
   <Provider store={store}>
-    <Routes />
+    <App />
   </Provider>
 );
 

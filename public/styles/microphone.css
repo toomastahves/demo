@@ -1,0 +1,31 @@
+.microphone {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.mic-button {
+  outline: none;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+}
+
+.mic-start {
+  background-color: rgb(131, 224, 123);
+}
+
+.mic-stop {
+  background-color: rgb(246,128, 132);
+}
+
+.microphone > textarea {
+  height: 200px;
+  font-size: 14px;
+  padding: 5px;
+  margin: 5px;
+  outline: none;
+  border: 1px solid black;
+}

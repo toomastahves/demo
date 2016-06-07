@@ -1,24 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { startMicrophone, stopMicrophone } from '../actions/microphone';
+import HomePage from './Pages/HomePage';
 
-export const App = ({ dispatch }) => {
-  const handleStartMicrophone = (e) => {
-    e.preventDefault();
-    dispatch(startMicrophone());
-  };
-  const handleStopMicrophone = (e) => {
-    e.preventDefault();
-    dispatch(stopMicrophone());
-  };
-  return (
-    <div className='center'>
-      <button id='start' onClick={handleStartMicrophone}>{'Start'}</button>
-      <button id='stop' onClick={handleStopMicrophone}>{'Stop'}</button>
-      <br />
-      <textarea id='result'></textarea>
-    </div>
-  );
+export const App = () => {
+  return <HomePage />;
 };
 
-export default connect()(App);
+export default App;

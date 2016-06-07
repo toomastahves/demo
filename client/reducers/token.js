@@ -1,16 +1,18 @@
-import { GET_TOKEN_SUCCESS, GET_TOKEN_ERROR } from '../constants/token';
+import * as constants from '../constants/';
 
 const initialState = {
-  token: '',
-  error: ''
+  fetching: false,
+  token: {}
 };
 
 export const tokenReducer = (state = initialState, action) => {
   switch(action.type) {
-    case GET_TOKEN_SUCCESS:
-      return Object.assign({}, state, { token: action.token });
-    case GET_TOKEN_ERROR:
-      return Object.assign({}, state, { error: action.error });
+    case constants.GET_TOKEN_REQUEST:
+      return Object.assign({}, state, { fetching: true });
+    case constants.GET_TOKEN_SUCCESS:
+      return Object.assign({}, state, { fetching: false, token: action.token });
+    case constants.GET_TOKEN_ERROR:
+      return Object.assign({}, state, { fetching: false, error: action.error });
     default:
       return state;
   }

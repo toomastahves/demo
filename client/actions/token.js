@@ -1,31 +1,21 @@
-import { GET_TOKEN_SUCCESS, GET_TOKEN_ERROR } from '../constants/token';
-import fetch from 'isomorphic-fetch';
+import * as actions from '../constants/';
+
+export const getTokenRequest = () => {
+  return {
+    type: actions.GET_TOKEN_REQUEST
+  };
+};
 
 export const getTokenSuccess = (token) => {
   return {
-    type: GET_TOKEN_SUCCESS,
-    token
+    type: actions.GET_TOKEN_SUCCESS,
+    token: token.token
   };
 };
 
-export const getTokenError = (error) => {
+export const getTokenFailed = (error) => {
   return {
-    type: GET_TOKEN_ERROR,
+    type: actions.GET_TOKEN_FAILED,
     error
-  };
-};
-
-export const getToken = () => {
-  return dispatch => {
-    return fetch('http://localhost:3000/token', {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(token => dispatch(getTokenSuccess(token)))
-    .catch(error => dispatch(getTokenError(error)));
   };
 };

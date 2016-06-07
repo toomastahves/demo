@@ -1,11 +1,18 @@
-import { START_MICROPHONE, STOP_MICROPHONE } from '../constants/microphone';
-import Microphone from '../services/Microphone';
+import { START_MICROPHONE, STOP_MICROPHONE, TEXT_RESULT } from '../constants/index';
+import Microphone from '../utils/Microphone';
 import store from '../store/';
 
 const micOptions = {
   bufferSize: 8192
 };
 const mic = new Microphone(micOptions);
+
+const textResult = (result) => {
+  return {
+    type: TEXT_RESULT,
+    result
+  };
+};
 
 export const startMicrophone = () => {
   let listening = false;
@@ -45,9 +52,8 @@ export const startMicrophone = () => {
       }
     }
     if (msg.results) {
-      const box = document.getElementById('result');
       if(msg.results[0].final) {
-        box.value = box.value + msg.results[0].alternatives[0].transcript;
+        store.dispatch(textResult(msg.results[0].alternatives[0].transcript));
       }
     }
   };

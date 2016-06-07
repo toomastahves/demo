@@ -1,6 +1,11 @@
 import watson from 'watson-developer-cloud';
 import config from '../config/';
 
+export function* getHome() {
+  console.log('Home content request');
+  this.body = { message: 'Home content' };
+}
+
 const authorization = watson.authorization({
   username: config.USERNAME_SPEECH_TO_TEXT,
   password: config.PASSWORD_SPEECH_TO_TEXT,
@@ -10,12 +15,13 @@ const params = {
   url: 'https://stream.watsonplatform.net/speech-to-text/api'
 };
 
-export const getToken = (req, res) => {
+function thunk(callback) {
   authorization.getToken(params, (err, token) => {
-    if (!token) {
-      res.send(err);
-    } else {
-      res.json(token);
-    }
+    callback(err, token);
   });
-};
+}
+
+export function* getToken() {
+  const token = yield thunk;
+  this.body = { token };
+}
