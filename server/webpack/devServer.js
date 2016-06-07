@@ -12,6 +12,6 @@ export const startWebpackDevServer = () => {
     }
   })
   .listen(1337, '127.0.0.1', () => {
-    console.log('WebpackDevServer started at localhost:1337');
+    console.log('WebpackDevServer started at 1337');
   });
 };
